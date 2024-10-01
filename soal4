@@ -1,0 +1,23 @@
+program kalkulator;
+uses crt;
+var
+    operasi: char;
+    num1, num2, hasil: real;
+begin
+    writeln('Pilihlah operasi matematika yang ada dibawah ini : ');
+    writeln('1. Penjumlahan');
+    writeln('2. Pengurangan');
+    writeln('3. Perkalian');
+    writeln('4. Pembagian');
+    readln(operasi);
+    writeln('Lalu masukkan 2 angka yang akan di operasikan : '); readln(num1, num2);
+
+    case operasi of
+        '1' : hasil := num1 + num2;
+        '2' : hasil := num1 - num2;
+        '3' : hasil := num1 * num2;
+        '4' : hasil := num1 / num2;
+    end;
+
+    writeln('Hasilnya adalah ',hasil :0 :2);
+    end. 
