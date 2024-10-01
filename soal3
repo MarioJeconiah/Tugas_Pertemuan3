@@ -1,0 +1,25 @@
+program temperatur;
+uses crt;
+var 
+    suhu: real;
+    pilihan: char;
+
+begin
+    clrscr;
+    writeln('Pilih salah jenis konversi suhu yang ada dibawah ini');
+    writeln('1. Celcius ke Fahrenheit');
+    writeln('2. Fahrenheit ke Celcius');
+    writeln('3. Celcius ke Kelvin');
+    writeln('4. Kelvin ke Celcius');
+    readln(pilihan);
+    writeln('Masukkan suhu'); readln(suhu);
+
+    case pilihan of
+        '1' : suhu := (9/5 * suhu) + 32;
+        '2' : suhu := 5/9 * (suhu - 32);
+        '3' : suhu := suhu + 273;
+        '4' : suhu := suhu - 273;
+        end;
+
+    write('hasil konversinya adalah ',suhu:0:0);
+end.
