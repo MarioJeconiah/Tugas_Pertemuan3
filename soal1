@@ -1,0 +1,26 @@
+program latihan;
+uses crt;
+var 
+    hasil, harga: real;
+begin
+    clrscr;
+    write('Masukkan total belanjaan anda : '); readln(harga);
+
+    if (harga >= 100000) and (harga <= 499999) then begin
+    hasil := harga * 0.9;
+    end
+
+    else if  (harga >= 500000) and (harga <= 999999) then begin
+    hasil := harga * 8 / 10;
+    end
+
+    else if (harga >= 1000000) then begin
+    hasil := harga * 7 / 10;
+    end
+
+    else begin
+    hasil := harga;
+    end;
+
+    write('Harga yg harus kamu bayar adalah ',hasil: 0: 0, ' Rupiah');
+    end.
